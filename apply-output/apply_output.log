@@ -1,0 +1,139 @@
+$ terraform apply -var aws_account_ids='["MY_AWS_ACCOUNT_ID"]'
+..
+..
+
+module.sandbox_vpc.aws_vpc.application_vpc: Creating...
+module.sandbox_vpc.aws_vpc.application_vpc: Still creating... [10s elapsed]
+module.sandbox_vpc.aws_vpc.application_vpc: Creation complete after 11s [id=vpc-0ae5b89ec20a397d4]
+module.sandbox_vpc.aws_internet_gateway.internet_gw: Creating...
+module.sandbox_vpc.aws_subnet.public_subnets[0]: Creating...
+module.sandbox_vpc.aws_subnet.public_subnets[2]: Creating...
+module.sandbox_vpc.aws_subnet.private_subnets[0]: Creating...
+module.sandbox_vpc.aws_subnet.private_subnets[1]: Creating...
+module.sandbox_vpc.aws_subnet.private_subnets[2]: Creating...
+module.sandbox_vpc.aws_subnet.public_subnets[1]: Creating...
+module.sandbox_vpc.aws_internet_gateway.internet_gw: Creation complete after 1s [id=igw-0d67af2e7104f40eb]
+module.sandbox_vpc.aws_route_table.public_rt: Creating...
+module.sandbox_vpc.aws_subnet.private_subnets[1]: Creation complete after 1s [id=subnet-03c918bad5eaf7123]
+module.sandbox_vpc.aws_subnet.private_subnets[0]: Creation complete after 1s [id=subnet-0e9a0684907dd68e2]
+module.sandbox_vpc.aws_subnet.private_subnets[2]: Creation complete after 2s [id=subnet-0a3510692d1424d69]
+module.sandbox_vpc.aws_subnet.public_subnets[2]: Still creating... [10s elapsed]
+module.sandbox_vpc.aws_subnet.public_subnets[0]: Still creating... [10s elapsed]
+module.sandbox_vpc.aws_subnet.public_subnets[1]: Still creating... [10s elapsed]
+module.sandbox_vpc.aws_route_table.public_rt: Still creating... [10s elapsed]
+module.sandbox_vpc.aws_subnet.public_subnets[1]: Creation complete after 12s [id=subnet-051e789f9492850fb]
+module.sandbox_vpc.aws_subnet.public_subnets[2]: Creation complete after 12s [id=subnet-046a0696464768223]
+module.sandbox_vpc.aws_subnet.public_subnets[0]: Creation complete after 12s [id=subnet-0025d333f82d89892]
+module.sandbox_vpc.aws_eip.nat_eip[0]: Creating...
+module.sandbox_vpc.aws_eip.nat_eip[1]: Creating...
+module.sandbox_vpc.aws_eip.nat_eip[2]: Creating...
+module.sandbox_vpc.aws_eip.nat_eip[0]: Creation complete after 0s [id=eipalloc-07467498fa8af6702]
+module.sandbox_vpc.aws_eip.nat_eip[2]: Creation complete after 0s [id=eipalloc-01d888a914482bc6d]
+module.sandbox_vpc.aws_eip.nat_eip[1]: Creation complete after 0s [id=eipalloc-020f0114ea5f5d4ee]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[1]: Creating...
+module.sandbox_vpc.aws_nat_gateway.nat_gw[2]: Creating...
+module.sandbox_vpc.aws_nat_gateway.nat_gw[0]: Creating...
+module.sandbox_vpc.aws_route_table.public_rt: Still creating... [20s elapsed]
+module.sandbox_vpc.aws_route_table.public_rt: Creation complete after 21s [id=rtb-0a75b06efd004b554]
+module.sandbox_vpc.aws_route_table_association.public_rta[1]: Creating...
+module.sandbox_vpc.aws_route_table_association.public_rta[0]: Creating...
+module.sandbox_vpc.aws_route_table_association.public_rta[2]: Creating...
+module.sandbox_vpc.aws_route_table_association.public_rta[2]: Creation complete after 0s [id=rtbassoc-0c5e9b3fc609616eb]
+module.sandbox_vpc.aws_route_table_association.public_rta[1]: Creation complete after 0s [id=rtbassoc-0e572d46fd2e39bda]
+module.sandbox_vpc.aws_route_table_association.public_rta[0]: Creation complete after 0s [id=rtbassoc-03278f948a6789f98]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[2]: Still creating... [10s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[1]: Still creating... [10s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[0]: Still creating... [10s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[0]: Still creating... [20s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[1]: Still creating... [20s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[2]: Still creating... [20s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[1]: Still creating... [30s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[2]: Still creating... [30s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[0]: Still creating... [30s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[0]: Still creating... [40s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[1]: Still creating... [40s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[2]: Still creating... [40s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[1]: Still creating... [50s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[2]: Still creating... [50s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[0]: Still creating... [50s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[0]: Still creating... [1m0s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[1]: Still creating... [1m0s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[2]: Still creating... [1m0s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[2]: Still creating... [1m10s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[1]: Still creating... [1m10s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[0]: Still creating... [1m10s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[0]: Still creating... [1m20s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[1]: Still creating... [1m20s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[2]: Still creating... [1m20s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[2]: Still creating... [1m30s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[0]: Still creating... [1m30s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[1]: Still creating... [1m30s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[0]: Creation complete after 1m34s [id=nat-0a6943709850119ed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[2]: Creation complete after 1m34s [id=nat-0d767ccdb78042bed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[1]: Creation complete after 1m34s [id=nat-0a5c47b6dfe093c7a]
+module.sandbox_vpc.aws_route_table.lambda_function_rt[1]: Creating...
+module.sandbox_vpc.aws_route_table.lambda_function_rt[0]: Creating...
+module.sandbox_vpc.aws_route_table.lambda_function_rt[2]: Creating...
+module.sandbox_vpc.aws_route_table.lambda_function_rt[0]: Creation complete after 1s [id=rtb-09abf50ac30dfaa3e]
+module.sandbox_vpc.aws_route_table.lambda_function_rt[1]: Creation complete after 1s [id=rtb-07c494eea2553b34d]
+module.sandbox_vpc.aws_route_table.lambda_function_rt[2]: Creation complete after 1s [id=rtb-07e531738c5ad9790]
+module.sandbox_vpc.aws_route_table_association.private_rta[0]: Creating...
+module.sandbox_vpc.aws_route_table_association.private_rta[1]: Creating...
+module.sandbox_vpc.aws_route_table_association.private_rta[2]: Creating...
+module.sandbox_vpc.aws_route_table_association.private_rta[2]: Still creating... [10s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[1]: Still creating... [10s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[0]: Still creating... [10s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[0]: Still creating... [20s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[1]: Still creating... [20s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[2]: Still creating... [20s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[1]: Still creating... [30s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[2]: Still creating... [30s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[0]: Still creating... [30s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[0]: Still creating... [40s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[1]: Still creating... [40s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[2]: Still creating... [40s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[1]: Still creating... [50s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[2]: Still creating... [50s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[0]: Still creating... [50s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[2]: Still creating... [1m0s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[0]: Still creating... [1m0s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[1]: Still creating... [1m0s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[1]: Still creating... [1m10s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[2]: Still creating... [1m10s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[0]: Still creating... [1m10s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[0]: Still creating... [1m20s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[1]: Still creating... [1m20s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[2]: Still creating... [1m20s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[2]: Still creating... [1m30s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[1]: Still creating... [1m30s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[0]: Still creating... [1m30s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[2]: Still creating... [1m40s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[1]: Still creating... [1m40s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[0]: Still creating... [1m40s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[2]: Still creating... [1m50s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[0]: Still creating... [1m50s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[1]: Still creating... [1m50s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[1]: Still creating... [2m0s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[0]: Still creating... [2m0s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[2]: Still creating... [2m0s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[2]: Still creating... [2m10s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[0]: Still creating... [2m10s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[1]: Still creating... [2m10s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[1]: Still creating... [2m20s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[2]: Still creating... [2m20s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[0]: Still creating... [2m20s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[0]: Still creating... [2m30s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[1]: Still creating... [2m30s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[2]: Still creating... [2m30s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[1]: Still creating... [2m40s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[0]: Still creating... [2m40s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[2]: Still creating... [2m40s elapsed]
+module.sandbox_vpc.aws_route_table_association.private_rta[1]: Creation complete after 2m44s [id=rtbassoc-066ec77e7ac3b8518]
+module.sandbox_vpc.aws_route_table_association.private_rta[0]: Creation complete after 2m44s [id=rtbassoc-05a2de76e7fccb748]
+module.sandbox_vpc.aws_route_table_association.private_rta[2]: Creation complete after 2m44s [id=rtbassoc-08c8477cd51cac54a]
+
+Apply complete! Resources: 24 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+vpc_id = "vpc-0ae5b89ec20a397d4"

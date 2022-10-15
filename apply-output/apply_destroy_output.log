@@ -1,0 +1,74 @@
+$ terraform destroy -var aws_account_ids='["MY_AWS_ACCOUNT_ID"]'
+..
+..
+
+module.sandbox_vpc.aws_route_table_association.private_rta[1]: Destroying... [id=rtbassoc-066ec77e7ac3b8518]
+module.sandbox_vpc.aws_route_table_association.private_rta[2]: Destroying... [id=rtbassoc-08c8477cd51cac54a]
+module.sandbox_vpc.aws_route_table_association.public_rta[2]: Destroying... [id=rtbassoc-0c5e9b3fc609616eb]
+module.sandbox_vpc.aws_route_table_association.public_rta[1]: Destroying... [id=rtbassoc-0e572d46fd2e39bda]
+module.sandbox_vpc.aws_route_table_association.public_rta[0]: Destroying... [id=rtbassoc-03278f948a6789f98]
+module.sandbox_vpc.aws_route_table_association.private_rta[0]: Destroying... [id=rtbassoc-05a2de76e7fccb748]
+module.sandbox_vpc.aws_route_table_association.private_rta[2]: Destruction complete after 0s
+module.sandbox_vpc.aws_route_table_association.private_rta[1]: Destruction complete after 0s
+module.sandbox_vpc.aws_route_table_association.public_rta[1]: Destruction complete after 0s
+module.sandbox_vpc.aws_route_table_association.public_rta[2]: Destruction complete after 0s
+module.sandbox_vpc.aws_route_table_association.private_rta[0]: Destruction complete after 0s
+module.sandbox_vpc.aws_route_table_association.public_rta[0]: Destruction complete after 0s
+module.sandbox_vpc.aws_subnet.private_subnets[1]: Destroying... [id=subnet-03c918bad5eaf7123]
+module.sandbox_vpc.aws_subnet.private_subnets[2]: Destroying... [id=subnet-0a3510692d1424d69]
+module.sandbox_vpc.aws_subnet.private_subnets[0]: Destroying... [id=subnet-0e9a0684907dd68e2]
+module.sandbox_vpc.aws_route_table.lambda_function_rt[1]: Destroying... [id=rtb-07c494eea2553b34d]
+module.sandbox_vpc.aws_route_table.public_rt: Destroying... [id=rtb-0a75b06efd004b554]
+module.sandbox_vpc.aws_route_table.lambda_function_rt[0]: Destroying... [id=rtb-09abf50ac30dfaa3e]
+module.sandbox_vpc.aws_route_table.lambda_function_rt[2]: Destroying... [id=rtb-07e531738c5ad9790]
+module.sandbox_vpc.aws_subnet.private_subnets[2]: Destruction complete after 1s
+module.sandbox_vpc.aws_subnet.private_subnets[1]: Destruction complete after 1s
+module.sandbox_vpc.aws_route_table.lambda_function_rt[2]: Destruction complete after 1s
+module.sandbox_vpc.aws_route_table.lambda_function_rt[0]: Destruction complete after 1s
+module.sandbox_vpc.aws_route_table.public_rt: Destruction complete after 1s
+module.sandbox_vpc.aws_subnet.private_subnets[0]: Destruction complete after 1s
+module.sandbox_vpc.aws_internet_gateway.internet_gw: Destroying... [id=igw-0d67af2e7104f40eb]
+module.sandbox_vpc.aws_route_table.lambda_function_rt[1]: Destruction complete after 1s
+module.sandbox_vpc.aws_nat_gateway.nat_gw[0]: Destroying... [id=nat-0a6943709850119ed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[1]: Destroying... [id=nat-0a5c47b6dfe093c7a]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[2]: Destroying... [id=nat-0d767ccdb78042bed]
+module.sandbox_vpc.aws_internet_gateway.internet_gw: Still destroying... [id=igw-0d67af2e7104f40eb, 10s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[2]: Still destroying... [id=nat-0d767ccdb78042bed, 10s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[0]: Still destroying... [id=nat-0a6943709850119ed, 10s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[1]: Still destroying... [id=nat-0a5c47b6dfe093c7a, 10s elapsed]
+module.sandbox_vpc.aws_internet_gateway.internet_gw: Still destroying... [id=igw-0d67af2e7104f40eb, 20s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[0]: Still destroying... [id=nat-0a6943709850119ed, 20s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[1]: Still destroying... [id=nat-0a5c47b6dfe093c7a, 20s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[2]: Still destroying... [id=nat-0d767ccdb78042bed, 20s elapsed]
+module.sandbox_vpc.aws_internet_gateway.internet_gw: Still destroying... [id=igw-0d67af2e7104f40eb, 30s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[1]: Still destroying... [id=nat-0a5c47b6dfe093c7a, 30s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[2]: Still destroying... [id=nat-0d767ccdb78042bed, 30s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[0]: Still destroying... [id=nat-0a6943709850119ed, 30s elapsed]
+module.sandbox_vpc.aws_internet_gateway.internet_gw: Still destroying... [id=igw-0d67af2e7104f40eb, 40s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[1]: Still destroying... [id=nat-0a5c47b6dfe093c7a, 40s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[2]: Still destroying... [id=nat-0d767ccdb78042bed, 40s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[0]: Still destroying... [id=nat-0a6943709850119ed, 40s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[0]: Destruction complete after 41s
+module.sandbox_vpc.aws_internet_gateway.internet_gw: Still destroying... [id=igw-0d67af2e7104f40eb, 50s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[1]: Still destroying... [id=nat-0a5c47b6dfe093c7a, 50s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[2]: Still destroying... [id=nat-0d767ccdb78042bed, 50s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[1]: Destruction complete after 51s
+module.sandbox_vpc.aws_internet_gateway.internet_gw: Destruction complete after 57s
+module.sandbox_vpc.aws_nat_gateway.nat_gw[2]: Still destroying... [id=nat-0d767ccdb78042bed, 1m0s elapsed]
+module.sandbox_vpc.aws_nat_gateway.nat_gw[2]: Destruction complete after 1m1s
+module.sandbox_vpc.aws_eip.nat_eip[1]: Destroying... [id=eipalloc-020f0114ea5f5d4ee]
+module.sandbox_vpc.aws_eip.nat_eip[2]: Destroying... [id=eipalloc-01d888a914482bc6d]
+module.sandbox_vpc.aws_eip.nat_eip[0]: Destroying... [id=eipalloc-07467498fa8af6702]
+module.sandbox_vpc.aws_eip.nat_eip[0]: Destruction complete after 1s
+module.sandbox_vpc.aws_eip.nat_eip[2]: Destruction complete after 1s
+module.sandbox_vpc.aws_eip.nat_eip[1]: Destruction complete after 1s
+module.sandbox_vpc.aws_subnet.public_subnets[2]: Destroying... [id=subnet-046a0696464768223]
+module.sandbox_vpc.aws_subnet.public_subnets[0]: Destroying... [id=subnet-0025d333f82d89892]
+module.sandbox_vpc.aws_subnet.public_subnets[1]: Destroying... [id=subnet-051e789f9492850fb]
+module.sandbox_vpc.aws_subnet.public_subnets[0]: Destruction complete after 0s
+module.sandbox_vpc.aws_subnet.public_subnets[1]: Destruction complete after 0s
+module.sandbox_vpc.aws_subnet.public_subnets[2]: Destruction complete after 0s
+module.sandbox_vpc.aws_vpc.application_vpc: Destroying... [id=vpc-0ae5b89ec20a397d4]
+module.sandbox_vpc.aws_vpc.application_vpc: Destruction complete after 1s
+
+Destroy complete! Resources: 24 destroyed.
