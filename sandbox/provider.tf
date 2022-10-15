@@ -16,5 +16,14 @@ provider "aws" {
   region              = var.aws_region
   allowed_account_ids = var.aws_account_ids
   profile             = "default"
-  version             = ">= 2.46.0"
+  # Fix warning: moved version to required_providers block to fix a warning for a deprecated syntax
+  # version             = ">= 2.46.0"
+}
+
+terraform {
+  required_providers {
+    aws = {
+      version         = ">= 2.46.0"
+      }
+  }
 }
