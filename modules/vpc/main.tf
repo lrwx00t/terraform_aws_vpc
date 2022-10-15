@@ -31,7 +31,15 @@ resource "aws_subnet" "public_subnets" {
 }
 
 resource "aws_subnet" "private_subnets" {
-  # Implement this resource
+  # Completed - Implement this resource
+  vpc_id     = aws_vpc.application_vpc.id
+  cidr_block              = element(var.private_subnet_cidr_blocks, count.index)
+  availability_zone       = element(var.availability_zones, count.index)
+  count                   = length(var.private_subnet_cidr_blocks)
+
+  tags = {
+    Name = "${var.environment}_private_subnet_${substr(element(var.availability_zones, count.index), -1, 1)}"
+  }
 }
 
 # Internet Gateway
