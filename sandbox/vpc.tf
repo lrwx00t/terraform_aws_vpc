@@ -33,7 +33,9 @@ variable "environment" {
 }
 
 module "sandbox_vpc" {
-  source = "../../modules/vpc"
+  # FIX: wrong path references in sandbox_vpc module. It should up for one parent directory.
+  # source = "../../modules/vpc"
+  source = "../modules/vpc"
 
   availability_zones        = var.availability_zones
   environment               = var.environment
