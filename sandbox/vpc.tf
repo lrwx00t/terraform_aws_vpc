@@ -41,6 +41,8 @@ module "sandbox_vpc" {
   environment               = var.environment
   vpc_cidr_block            = "172.33.0.0/16"
   public_subnet_cidr_blocks = var.public_subnet_cidr_blocks
+  # FIX: missing required argument
+  private_subnet_cidr_blocks = var.private_subnet_cidr_blocks
 }
 
 output "vpc_id" {
