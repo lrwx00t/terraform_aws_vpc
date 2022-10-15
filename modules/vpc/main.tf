@@ -49,7 +49,9 @@ resource "aws_route_table" "public_rt" {
 
   route {
     cidr_block = "0.0.0.0/0"
-    gateway_id = 
+    # FIX: missing value for the gateway_id attribute in the public_rt resource. Assigning the value of the internet gateway id for the public routing table resource
+    # gateway_id = 
+    gateway_id = aws_internet_gateway.internet_gw.id
   }
 
   tags = {
