@@ -15,7 +15,9 @@ resource "aws_vpc" "application_vpc" {
 
 # Subnets
 resource "aws_subnet" "public_subnets" {
-  vpc_id                  = 
+  # Fix: missing attribute value in the public_subnets resource. Need to assign a value for the VPC id of the applica_vpc resource in the previous block.
+  # vpc_id                  = 
+  vpc_id                  = aws_vpc.application_vpc.id
   cidr_block              = element(var.public_subnet_cidr_blocks, count.index)
   availability_zone       = element(var.availability_zones, count.index)
   map_public_ip_on_launch = true
