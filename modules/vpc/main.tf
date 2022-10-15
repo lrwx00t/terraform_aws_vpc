@@ -97,7 +97,11 @@ resource "aws_route_table" "lambda_function_rt" {
 # private subnet route table associations
 resource "aws_route_table_association" "private_rta" {
   subnet_id      = element(aws_subnet.private_subnets.*.id, count.index)
-  route_table_id = aws_route_table.lambda_function_rt[].id
+  # FIX: missing count index in the route_table_id of the private_rta resource. Need to specify the count index so terrraform can iterate over the list of the RT associated with each subnet_id. 
+  # route_table_id = aws_route_table.lambda_function_rt[].id
+  # Note: While there is another syntax that can be used here e.g. element, I used [count.index] instead of element as described in Terraform official doco: Use the built-in index syntax list[index] in most cases. Use this function only for the special additional "wrap-around" behavior described below.
+  # Ref: https://www.terraform.io/language/functions/element
+  route_table_id = aws_route_table.lambda_function_rt[count.index].id
   count          = length(aws_subnet.private_subnets)
 }
 
